@@ -64,29 +64,24 @@ const InviteUserModal = ({ visible, setVisible }: InviteUserModalProps) => {
         >
           {() => (
             <div className="space-y-6 py-4">
-              <Modal.Content>
-                <Input
-                  id="email"
-                  className="w-full"
-                  label="User email"
-                  icon={<IconMail />}
-                  type="email"
-                  name="email"
-                  placeholder="User email"
-                />
-              </Modal.Content>
-
-              <Modal.Content>
-                <Button
-                  block
-                  size="small"
-                  htmlType="submit"
-                  loading={isInviting}
-                  disabled={!canInviteUsers || isInviting}
-                >
-                  Invite user
-                </Button>
-              </Modal.Content>
+              <Input
+                id="email"
+                className="w-full"
+                label="User email"
+                icon={<IconMail />}
+                type="email"
+                name="email"
+                placeholder="User email"
+              />
+              <Button
+                block
+                size="small"
+                htmlType="submit"
+                loading={isInviting}
+                disabled={!canInviteUsers || isInviting}
+              >
+                Invite user
+              </Button>
             </div>
           )}
         </Form>
